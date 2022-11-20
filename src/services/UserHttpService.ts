@@ -11,7 +11,7 @@ class UserHttpService{
     }
 
     async login(idn: string){
-       await axios.post("/", {}, {params:{"IDN": idn} ,...this.axiosConfig})
+       await axios.post("/", {params:{"IDN": idn} ,...this.axiosConfig})
     }
 }
 

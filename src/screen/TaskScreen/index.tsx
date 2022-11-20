@@ -127,9 +127,9 @@ export default function TaskScreen(){
         .catch((error) => console.log(error))
         .finally(() => setCarregando(false))
     }
-    // useEffect(()=>{
-    //     loadTask()
-    // },[taskCounter]);
+    useEffect(()=>{
+        loadTask()
+    },[taskCounter]);
 
     const handleComplete = async () => {
         await useService.completed(idn)
